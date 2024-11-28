@@ -3,14 +3,18 @@ import java.util.regex.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Java");
-        String hello="hello java";
-        System.out.println(hello);
+        System.out.print("1: ");
+        System.out.print("Hello Java");
+        System.out.print("\n2: ");
+        String hello="Hello java";
+        System.out.print(hello);
+        System.out.print("\n3: ");
         "Hello Java".chars().forEach(a->System.out.print((char)a));
-        System.out.println();
+        System.out.print("\n4: ");
         Arrays.stream("Hello Java".split("//s+")).forEach(System.out::print);
-        System.out.println();
+        System.out.print("\n5: ");  //no space ?
         Pattern.compile("\\s+").splitAsStream("Hello Java").forEach(System.out::print);
-        new Thread(System.out::println).start();
+        System.out.print("\n6: ");
+        new Thread(()->System.out.println("Hello Java")).start();
     }
 }
